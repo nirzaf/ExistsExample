@@ -12,14 +12,7 @@ namespace ExistsExample
 
             //Exists: check if the student is failed
             bool b = marks.Exists(m => m < 35);
-            if (b == true)
-            {
-                Console.WriteLine("Student is failed in one or more subjects");
-            }
-            else
-            {
-                Console.WriteLine("Student is Pass");
-            }
+            Console.WriteLine(b ? "Student is failed in one or more subjects" : "Student is Pass");
 
             //Find: Get marks of first failed subject
             int firstFailedMarks = marks.Find(m => m < 35);
